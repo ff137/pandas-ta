@@ -48,8 +48,8 @@ setup(
         "data": ["data/*.csv"],
     },
     install_requires=[
-        "numpy==1.26.4",
-        "pandas"
+        "numpy==2.0.2",
+        "pandas==2.2.3"
     ],
     # List additional groups of dependencies here (e.g. development dependencies).
     # You can install these using the following syntax, for example:
@@ -60,6 +60,6 @@ setup(
             "sklearn", "statsmodels", "stochastic",
             "talib", "tqdm", "vectorbt", "yfinance",
         ],
-        "test": ["pytest", "ta-lib"],
+        "test": ["pytest", "ta-lib==0.6.0"],
     },
 )
