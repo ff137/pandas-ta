@@ -19,7 +19,7 @@ setup(
         "pandas_ta.volatility",
         "pandas_ta.volume"
     ],
-    version=".".join(("0", "4", "20")),
+    version=".".join(("0", "5", "0")),
     description=long_description,
     long_description=long_description,
     author="Kevin Johnson",
@@ -54,11 +54,11 @@ setup(
         "data": ["data/*.csv"],
     },
     install_requires=[
-        "numba>=0.59.0",
-        "numpy==1.26.4",
-        "pandas>=2.2.0",
-        "pandas-datareader",
-        "scipy>=1.12"
+        "numba==0.61.0",
+        "numpy==2.0.2",
+        "pandas==2.2.3",
+        "pandas-datareader==0.10.0",
+        "scipy==1.15.1"
     ],
     # List additional groups of dependencies here (e.g. development dependencies).
     # You can install these using the following syntax, for example:
@@ -66,18 +66,31 @@ setup(
     # $ pip install -U pandas_ta[full]  # pip
     extras_require={
         "full": [
-            "alphaVantage-api", "matplotlib", "mplfinance",
-            "python-dotenv", "sklearn", "statsmodels", "stochastic",
-            "TA-Lib>=0.4.28", "tqdm", "vectorbt", "yfinance>=0.2.36"
+            "alphaVantage-api",
+            "ipython==8.31.0",
+            "matplotlib==3.10.0",
+            "matplotlib-inline==0.1.7",
+            "mplfinance",
+            "multitasking==0.0.11",
+            "python-dotenv",
+            "sklearn",
+            "statsmodels",
+            "stochastic",
+            "TA-Lib==0.6.4",
+            "tqdm",
+            "vectorbt",
+            "yfinance==0.2.51",
+            "pyarrow==18.1.0",
+            "streamlit==1.41.1"
         ],
         "test": [
-            "numba>=0.59.0",
-            "numpy==1.26.4",
-            "pandas>=2.2.0",
-            "pandas_datareader>=0.10.0",
+            "numba==0.61.0",
+            "numpy==2.0.2",
+            "pandas==2.2.3",
+            "pandas-datareader==0.10.0",
             "pytest==7.1.2",
-            "TA-Lib>=0.4.28",
-            "yfinance>=0.2.36"
+            "TA-Lib==0.6.3",
+            "yfinance==0.2.54"
         ],
     },
 )
