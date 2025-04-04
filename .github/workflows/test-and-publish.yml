@@ -52,17 +52,15 @@ jobs:
           path: |
             ${{ github.workspace }}/dependencies
             ${{ env.pythonLocation }}/lib/python*/site-packages/TA_Lib*
-            ${{ env.pythonLocation }}/lib/python*/site-packages/talib*
-          key: talib-v1-${{ runner.os }}-python-${{ matrix.python-version }}-${{ hashFiles('build_talib_from_source.bash') }}
+          key: talib-${{ runner.os }}-${{ hashFiles('**/setup.py') }}
           restore-keys: |
-            talib-v1-${{ runner.os }}-python-${{ matrix.python-version }}-
-            talib-v1-${{ runner.os }}-
+            talib-${{ runner.os }}-
 
       - name: Install TA-lib (if not cached)
         if: steps.cache-talib.outputs.cache-hit != 'true'
         shell: bash
         run: |
-          wget https://raw.githubusercontent.com/mrjbq7/ta-lib/master/tools/build_talib_from_source.bash
+          wget https://raw.githubusercontent.com/mrjbq7/ta-lib/TA_Lib-0.6.3/tools/build_talib_from_source.bash
           chmod +x build_talib_from_source.bash
           ./build_talib_from_source.bash $DEPS_PATH
           python -m pip install TA-lib
