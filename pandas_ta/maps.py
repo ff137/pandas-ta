@@ -5,7 +5,7 @@ from pkg_resources import get_distribution, DistributionNotFound
 
 from pandas_ta._typing import Dict, IntFloat, ListStr
 
-_dist = get_distribution("pandas_ta")
+_dist = get_distribution("pandas_ta_ff137")
 try:
     # Normalize case for Windows systems
     _here = Path(_dist.location) / __file__
