@@ -25,8 +25,8 @@ setup(
     author="Kevin Johnson",
     author_email="appliedmathkj@gmail.com",
     url="https://github.com/ff137/pandas-ta",
-    maintainer="Kevin Johnson",
-    maintainer_email="appliedmathkj@gmail.com",
+    maintainer="Mourits de Beer",
+    maintainer_email="ff137@proton.me",
     download_url="https://github.com/ff137/pandas-ta.git",
     keywords=[
         "technical analysis", "finance", "trading", "backtest", "trading bot",
