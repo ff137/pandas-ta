@@ -51,10 +51,12 @@ jobs:
         with:
           path: |
             ${{ github.workspace }}/dependencies
-            ${{ env.pythonLocation }}/lib/python*/site-packages/TA_lib*
-          key: talib-${{ runner.os }}-${{ hashFiles('**/setup.py') }}
+            ${{ env.pythonLocation }}/lib/python*/site-packages/TA_Lib*
+            ${{ env.pythonLocation }}/lib/python*/site-packages/talib*
+          key: talib-v1-${{ runner.os }}-python-${{ matrix.python-version }}-${{ hashFiles('build_talib_from_source.bash') }}
           restore-keys: |
-            talib-${{ runner.os }}-
+            talib-v1-${{ runner.os }}-python-${{ matrix.python-version }}-
+            talib-v1-${{ runner.os }}-
 
       - name: Install TA-lib (if not cached)
         if: steps.cache-talib.outputs.cache-hit != 'true'
