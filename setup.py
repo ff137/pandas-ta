@@ -24,10 +24,10 @@ setup(
     long_description=long_description,
     author="Kevin Johnson",
     author_email="appliedmathkj@gmail.com",
-    url="https://github.com/twopirllc/pandas-ta",
+    url="https://github.com/ff137/pandas-ta",
     maintainer="Kevin Johnson",
     maintainer_email="appliedmathkj@gmail.com",
-    download_url="https://github.com/twopirllc/pandas-ta.git",
+    download_url="https://github.com/ff137/pandas-ta.git",
     keywords=[
         "technical analysis", "finance", "trading", "backtest", "trading bot",
         "features", "pandas", "numpy", "numba", "vectorbt", "yfinance",
