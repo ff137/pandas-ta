@@ -4,7 +4,7 @@ from setuptools import setup
 long_description = "Pandas Technical Analysis, Pandas TA, is a free, Open Source, and easy to use Technical Analysis library with a Pandas DataFrame Extension. It has over 200 indicators, utility functions and TA Lib Candlestick Patterns. Beyond TA feature generation, it has a flat library structure, it's own DataFrame Extension (called 'ta'), Custom Indicator Studies and Independent Custom Directory."
 
 setup(
-    name="pandas_ta",
+    name="pandas_ta_ff137",
     packages=[
         "pandas_ta",
         "pandas_ta.candles",
@@ -19,15 +19,15 @@ setup(
         "pandas_ta.volatility",
         "pandas_ta.volume"
     ],
-    version=".".join(("0", "4", "19b")),
+    version=".".join(("0", "4", "20")),
     description=long_description,
     long_description=long_description,
     author="Kevin Johnson",
     author_email="appliedmathkj@gmail.com",
-    url="https://github.com/twopirllc/pandas-ta",
-    maintainer="Kevin Johnson",
-    maintainer_email="appliedmathkj@gmail.com",
-    download_url="https://github.com/twopirllc/pandas-ta.git",
+    url="https://github.com/ff137/pandas-ta",
+    maintainer="Mourits de Beer",
+    maintainer_email="ff137@proton.me",
+    download_url="https://github.com/ff137/pandas-ta.git",
     keywords=[
         "technical analysis", "finance", "trading", "backtest", "trading bot",
         "features", "pandas", "numpy", "numba", "vectorbt", "yfinance",
