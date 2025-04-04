@@ -45,8 +45,19 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
         if: steps.cache-python-env.outputs.cache-hit != 'true'
 
-      - name: Install TA-lib
-        # Inspiration for this step is taken from here: https://github.com/mrjbq7/ta-lib/blob/master/.github/workflows/tests.yml
+      - name: Cache TA-lib dependencies
+        uses: actions/cache@v3
+        id: cache-talib
+        with:
+          path: |
+            ${{ github.workspace }}/dependencies
+            ${{ env.pythonLocation }}/lib/python*/site-packages/TA_lib*
+          key: talib-${{ runner.os }}-${{ hashFiles('**/setup.py') }}
+          restore-keys: |
+            talib-${{ runner.os }}-
+
+      - name: Install TA-lib (if not cached)
+        if: steps.cache-talib.outputs.cache-hit != 'true'
         shell: bash
         run: |
           wget https://raw.githubusercontent.com/mrjbq7/ta-lib/master/tools/build_talib_from_source.bash
