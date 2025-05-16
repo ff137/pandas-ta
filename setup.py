@@ -19,7 +19,7 @@ setup(
         "pandas_ta.volatility",
         "pandas_ta.volume"
     ],
-    version=".".join(("0", "5", "1")),
+    version=".".join(("0", "5", "2")),
     description=long_description,
     long_description=long_description,
     author="Kevin Johnson",
@@ -54,12 +54,12 @@ setup(
         "data": ["data/*.csv"],
     },
     install_requires=[
-        "numba==0.61.0",
-        "numpy==2.0.2",
-        "pandas==2.2.3",
-        "pandas-datareader==0.10.0",
-        "scipy==1.15.1",
-        "setuptools==78.1.0"
+        "numba>=0.61.0",
+        "numpy>=2.0.2",
+        "pandas>=2.2.3",
+        "pandas-datareader>=0.10.0",
+        "scipy>=1.15.1",
+        "setuptools>=78.1.0"
     ],
     # List additional groups of dependencies here (e.g. development dependencies).
     # You can install these using the following syntax, for example:
@@ -85,10 +85,10 @@ setup(
             "streamlit==1.41.1"
         ],
         "test": [
-            "numba==0.61.0",
-            "numpy==2.0.2",
-            "pandas==2.2.3",
-            "pandas-datareader==0.10.0",
+            "numba>=0.61.0",
+            "numpy>=2.0.2",
+            "pandas>=2.2.3",
+            "pandas-datareader>=0.10.0",
             "pytest==7.1.2",
             "TA-Lib==0.6.3",
             "yfinance==0.2.54"
