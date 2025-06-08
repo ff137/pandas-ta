@@ -1,21 +1,21 @@
 # -*- coding: utf-8 -*-
 from importlib.util import find_spec
 from pathlib import Path
-from pkg_resources import get_distribution, DistributionNotFound
+from importlib.metadata import version as get_version, PackageNotFoundError
 
 from pandas_ta._typing import Dict, IntFloat, ListStr
 
-_dist = get_distribution("pandas_ta_ff137")
 try:
+    _dist_version = get_version("pandas_ta_ff137")
     # Normalize case for Windows systems
-    _here = Path(_dist.location) / __file__
+    _here = Path(__file__).resolve()
     if not _here.exists():
         # not installed, but there is another version that *is*
-        raise DistributionNotFound
-except DistributionNotFound:
+        raise PackageNotFoundError
+except PackageNotFoundError:
     __version__ = "Please install this project with setup.py"
 
-version = __version__ = _dist.version
+version = __version__ = _dist_version
 
 Imports: Dict[str, bool] = {
     "alphaVantage-api": find_spec("alphaVantageAPI") is not None,

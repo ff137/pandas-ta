@@ -19,7 +19,7 @@ setup(
         "pandas_ta.volatility",
         "pandas_ta.volume"
     ],
-    version=".".join(("0", "5", "2")),
+    version=".".join(("0", "5", "3")),
     description=long_description,
     long_description=long_description,
     author="Kevin Johnson",
@@ -59,7 +59,7 @@ setup(
         "pandas>=2.2.3",
         "pandas-datareader>=0.10.0",
         "scipy>=1.15.1",
-        "setuptools>=78.1.0"
+        "setuptools>=80.9.0"
     ],
     # List additional groups of dependencies here (e.g. development dependencies).
     # You can install these using the following syntax, for example:
